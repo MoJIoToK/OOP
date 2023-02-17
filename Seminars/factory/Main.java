@@ -12,26 +12,30 @@ public class Main {
 
         //L2();
         
-        Wolf simba = new Wolf(10, 140, 15, "Simba", 200);
+        Lion simba = new Lion(10, 140, 15, "Simba", 200);
         //System.out.println(simba);
-        simba.Feed(10);
         
-        ArrayList<Wolf> lions = LionsFactory.createLions(3);
+        
+        ArrayList<Lion> lions = LionsFactory.createLions(3);
         //System.out.println(lions);
 
-        WolfCage lionsInCage = new WolfCage();
+        LionCage lionsInCage = new LionCage();
 
         lionsInCage.addAnimal(simba);
 
-        for (Wolf lion : lions) {
+        for (Lion lion : lions) {
             lionsInCage.addAnimal(lion);
-            //System.out.println(lion);
+            lion.Feed(5);
         }
+
         System.out.println();
         System.out.println(lionsInCage);
 
         lionsInCage.takeOfAnimal();
         System.out.println(lionsInCage);
+        
+        simba.Feed(10);
+
     }
 
     

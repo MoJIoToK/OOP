@@ -15,8 +15,8 @@ public class WolfCage implements AnimalCage{
         this.wolf = new ArrayList<>();
     }
 
-    public void setLions(ArrayList lions){
-        this.wolf = lions;
+    public void setLions(ArrayList wolf){
+        this.wolf = wolf;
     }
 
     public void setFoodWeight(int foodWeight){

@@ -2,7 +2,7 @@ package animals;
 
 public class Wolf extends Animal {
     private int volumeHair;
-    protected static final int MAXWEIGHT = 150;
+    protected static final int MAXWEIGHT = 100;
     protected static final String TYPE = "Wolf";
 
     public Wolf(int ageOfBirth, int weight, int count, String name, int volumeHair) {
@@ -31,14 +31,5 @@ public class Wolf extends Animal {
     public String toString() {
         return String.format("%s, %s, %d, %d, %d", name, TYPE, ageOfBirth, weight, volumeHair);
     }
-
-    // @Override
-    // public void Feed(int foodWeight) {
-    //     if(this.weight + foodWeight <= MAXWEIGHT){
-    //         this.weight += foodWeight;
-    //     }
-    //     else System.out.println("Max weight");
-    //     //super.Feed(foodWeight);
-    // }
 
 }

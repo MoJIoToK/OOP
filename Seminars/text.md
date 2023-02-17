@@ -17,3 +17,9 @@
 ArrayList<Lion> createLions (int lionCount)
 В методе main создать коллекцию львов и положить её содержимое в клетку. Посмотрите состояние львов, покормите львов в клетке, проверьте изменился ли у них вес.
 
+# Comparable<E>
+Сравнивает объекты.
+Использует TreeSet and Collections.sort/Array.sort()
+
+TreeSet - использует HashCode.
+

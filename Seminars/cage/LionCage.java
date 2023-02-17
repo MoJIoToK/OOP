@@ -9,7 +9,7 @@ public class LionCage implements AnimalCage{
 
     private int foodWeight;
     private int garbage;
-    private ArrayList<Wolf> lions;
+    private ArrayList<Lion> lions;
 
     public LionCage(){
         this.lions = new ArrayList<>();
@@ -29,7 +29,7 @@ public class LionCage implements AnimalCage{
 
     @Override
     public int addAnimal(Animal animal) {
-        lions.add((Wolf) animal);
+        lions.add((Lion) animal);
         return lions.size();
     }
 
@@ -48,7 +48,7 @@ public class LionCage implements AnimalCage{
 
     @Override
     public String toString() {
-        for (Wolf lion : lions) {
+        for (Lion lion : lions) {
             System.out.println(lion);                   
         }
         System.out.println(lions.size());
@@ -56,13 +56,13 @@ public class LionCage implements AnimalCage{
     }
 
     @Override
-    public Wolf takeOfAnimal() {
+    public Lion takeOfAnimal() {
         if(lions == null) return null;
 
         else{
             Random random = new Random();
             int rand = random.nextInt(lions.size());
-            return (Wolf) lions.remove(rand);
+            return (Lion) lions.remove(rand);
         }
 
     }

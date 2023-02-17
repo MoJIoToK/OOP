@@ -16,11 +16,14 @@ public abstract class Animal {
     public void Feed(int foodWeight) { 
         if(this.weight + foodWeight <= getMaxWeight()){
             this.weight += foodWeight;
+            System.out.printf("%s got some food\n", name);
         }
-        else System.out.println("Max weight");
+        else System.out.printf("%s already is max weight", name);
     }
 
-    public abstract int getMaxWeight();
+    public String getName(){
+        return name;
+    }
     
     public int getAge() {
         return ageOfBirth;
@@ -35,6 +38,7 @@ public abstract class Animal {
     }
 
     public abstract String getType();
+    public abstract int getMaxWeight();
 
 }
 
