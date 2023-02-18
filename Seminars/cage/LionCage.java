@@ -1,6 +1,7 @@
 package cage;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 import animals.*;
@@ -66,5 +67,21 @@ public class LionCage implements AnimalCage{
         }
 
     }
+
+    public void sortLions() {
+        Collections.sort(lions);  
+    }
+
+    public void sortLionsByVolumeHair() {
+        Collections.sort(lions, new LionComparator());
+    }
+
+    public void printCage(){
+        for (Lion el: lions
+             ) {
+            System.out.println(el);
+        }
+    }
+
 
 }

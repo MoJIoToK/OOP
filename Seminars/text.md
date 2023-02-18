@@ -23,3 +23,50 @@ ArrayList<Lion> createLions (int lionCount)
 
 TreeSet - использует HashCode.
 
+# Comparator<E>
+
+# Iterator<E>
+у итератора есть 2 абстрактных метода(hasNext() and next()).
+Iterator<Lion> lionsIterator = lionsList.iteratщr();
+while (lionsIterator.hasNext()){
+    lion lion = lionIterator.next();
+    sout(...);
+}
+
+Пример
+есть класс итератор, который имплементирует итератор<машины>
+public class CarIterator implements Iterator<Car>
+private List<Car> cars;
+private int cursor;
+
+public CarIterator(List<Car> cars){
+    this.cars = cars;
+}
+
+@Override
+public boolean hasNext(){
+    return cursor < cars.size();
+}
+
+@Override
+public Car next(){
+    return cars.get(cursor++);
+}
+
+# Iterable<E>
+Возвращает итератор
+
+Предполжим есть класс гараж, в нем лист из машин
+public class Garage implements Iterable<Car>
+Iterator<Lion> lionsIterator = lionsList.iteratщr();
+while (lionsIterator.hasNext()){
+    lion lion = lionIterator.next();
+    sout(...);
+
+@Override
+public Iterator<Car> iterator(){
+    return new CarIterator(cars);
+}
+
+
+

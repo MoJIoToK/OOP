@@ -31,10 +31,14 @@ public class Main {
         System.out.println();
         System.out.println(lionsInCage);
 
+        //lionsInCage.sortLionsByVolumeHair();
+        //System.out.println(lionsInCage);
+
         lionsInCage.takeOfAnimal();
         System.out.println(lionsInCage);
         
-        simba.Feed(10);
+        //simba.Feed(10);
+
 
     }
 
