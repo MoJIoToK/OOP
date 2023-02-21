@@ -1,22 +1,25 @@
 package cage;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.Random;
 
 import animals.*;
 
-public class WolfCage implements AnimalCage{
+public class WolfCage implements AnimalCage, Iterable<Wolf> {
 
     private int foodWeight;
     private int garbage;
-    private ArrayList<Wolf> wolf;
+    private static ArrayList<Wolf> wolfs;
+    private int cursor;
 
     public WolfCage(){
-        this.wolf = new ArrayList<>();
+        this.wolfs = new ArrayList<>();
     }
 
-    public void setLions(ArrayList wolf){
-        this.wolf = wolf;
+    public void setLions(ArrayList wolfs){
+        this.wolfs = wolfs;
     }
 
     public void setFoodWeight(int foodWeight){
@@ -29,8 +32,10 @@ public class WolfCage implements AnimalCage{
 
     @Override
     public int addAnimal(Animal animal) {
-        wolf.add((Wolf) animal);
-        return wolf.size();
+        if (animal.getType().equals("Wolf")){
+            wolfs.add((Wolf) animal);  
+        }
+        return wolfs.size();
     }
 
     @Override
@@ -48,23 +53,36 @@ public class WolfCage implements AnimalCage{
 
     @Override
     public String toString() {
-        for (Wolf lion : wolf) {
-            System.out.println(lion);                   
+        for (Wolf wolf : wolfs) {
+            System.out.println(wolf);                   
         }
-        System.out.println(wolf.size());
-        return String.format("В клетке %d волка(-ов)", wolf.size());        
+        System.out.println(wolfs.size());
+        return String.format("В клетке %d волка(-ов)", wolfs.size());        
     }
 
     @Override
     public Wolf takeOfAnimal() {
-        if(wolf == null) return null;
+        if(wolfs == null) return null;
 
         else{
             Random random = new Random();
-            int rand = random.nextInt(wolf.size());
-            return (Wolf) wolf.remove(rand);
+            int rand = random.nextInt(wolfs.size());
+            return (Wolf) wolfs.remove(rand);
         }
-          
     }
+
+    public void sortWolfsByAge() {
+        Collections.sort(wolfs, new WolfAgeComparator());
+    }
+
+    public static void sortWolfsWeight() {
+        Collections.sort(wolfs, new WolfWeightComparator());
+    }
+    
+    @Override
+    public Iterator<Wolf> iterator() {
+        return new WolfIterator(wolfs);
+    }
+
 
 }
