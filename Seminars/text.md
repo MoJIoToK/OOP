@@ -68,5 +68,16 @@ public Iterator<Car> iterator(){
     return new CarIterator(cars);
 }
 
+## generic
 
+Параметризованные типы которые дают понять компилятору, что он будет работать с определенным типом.
+Создаем класс с неизвестным типом, а его тип определяем потом.
 
+## Wildcard
+маска
+ постановочный символ, обзначающий неизвестный тип данных. На месте этого символа можно использовать любой тип данных
+ Diamond<T> оператор - испольуется при объявлении переменной.
+
+ ClassArrays<? extends Number> byteArray = new ClassArrays<Byte>(); - ограничения по наследнику
+ ClassArrays<? super Number> byteArray = new ClassArrays<Number>(); - ограничения по предку
+ ClassArrays<?> byteArray = new ClassArrays<Byte>(); - без ограничения

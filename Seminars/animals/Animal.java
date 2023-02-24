@@ -1,6 +1,6 @@
 package animals;
 
-public abstract class Animal {
+public abstract class Animal{
     protected int ageOfBirth;
     protected int weight;
     protected int countOfLimbs;

@@ -38,9 +38,7 @@ public class Lion extends Animal implements Comparable<Lion> {
 
     @Override
     public int compareTo(Lion o) {
-        if(this.ageOfBirth > o.getAge()) return 1;
-        else if(this.ageOfBirth < o.getAge()) return -1;
-        return 0;
+        return Integer.compare(o.ageOfBirth, this.ageOfBirth);
     }
 
 }

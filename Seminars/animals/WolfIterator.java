@@ -18,7 +18,7 @@ public class WolfIterator implements Iterator{
     }
 
     @Override
-    public Object next() {
+    public Wolf next() {
         return wolfs.get(cursor++);
     }
     

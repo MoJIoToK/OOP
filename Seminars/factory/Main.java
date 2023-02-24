@@ -2,6 +2,7 @@ package factory;
 
 import java.util.ArrayList;
 
+import animalUtils.AnimalUtils;
 import animals.*;
 import cage.*;
 import factory.*;
@@ -40,28 +41,46 @@ public class Main {
 
         Wolf whiteFang = new Wolf(10, 50, 15, "Белый клык", "White");
 
-        ArrayList<Wolf> wolfs = WolfsFactory.createLions(2);
-
+        ArrayList<Wolf> wolfs = WolfsFactory.createLions(4);
         WolfCage wolfsInCage = new WolfCage();
 
         wolfsInCage.addAnimal(whiteFang);
 
         for (Wolf wolf : wolfs) {
             wolfsInCage.addAnimal(wolf);
-            wolf.Feed(5);
+            //wolf.Feed(5);
         }
 
         System.out.println();
         System.out.println(wolfsInCage);
-
-        WolfCage.sortWolfsWeight();
+        //wolfsInCage.takeOfAnimal();
+        
         System.out.println();
-        System.out.println("Сортировка по весу");
         System.out.println(wolfsInCage);
 
-        wolfsInCage.sortWolfsByAge();
+
+        // System.out.println();
+        // WolfCage.sortWolfsWeightAge();
+        // System.out.println(wolfs);
+
+
+        // AnimalUtils.sortAnimals(wolfs);
+        // System.out.println();
+        // System.out.println(wolfs);
+
+        // WolfCage.sortWolfsWeight();
+        // System.out.println();
+        // System.out.println("Сортировка по весу");
+        // System.out.println(wolfsInCage);
+
+        // WolfCage.sortWolfsByAge();
+        // System.out.println();
+        // System.out.println("Сортировка по возрасту");
+        // System.out.println(wolfsInCage);
+
+        WolfCage.sortWolfsWeightAge();
         System.out.println();
-        System.out.println("Сортировка по возрасту");
+        System.out.println("Сортировка по возрасту и весу");
         System.out.println(wolfsInCage);
         
 

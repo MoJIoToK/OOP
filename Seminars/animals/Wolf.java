@@ -37,7 +37,7 @@ public class Wolf extends Animal implements Comparable<Wolf> {
 
     @Override
     public String toString() {
-        return String.format("%s, %s, %d, %d, %s", name, TYPE, ageOfBirth, weight, color);
+        return String.format("%s, Тип животного - %s, Возраст - %d, Вес - %d, Цвет - %s", name, TYPE, ageOfBirth, weight, color);
     }
 
     @Override

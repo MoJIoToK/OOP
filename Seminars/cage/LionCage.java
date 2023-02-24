@@ -6,7 +6,7 @@ import java.util.Random;
 
 import animals.*;
 
-public class LionCage implements AnimalCage{
+public class LionCage implements AnimalCage<Lion>{
 
     private int foodWeight;
     private int garbage;
@@ -29,14 +29,24 @@ public class LionCage implements AnimalCage{
     }
 
     @Override
-    public int addAnimal(Animal animal) {
-        lions.add((Lion) animal);
+    public int addAnimal(Lion animal) {
+        if (animal.getType().equals("Lion")){
+            lions.add(animal);  
+        }
         return lions.size();
     }
 
     @Override
-    public int deliverFood(int wietghOfFood) {
-        return 0;
+    public void deliverFood(int wietghOfFood) {
+        int tempFood = wietghOfFood + this.foodWeight;
+        for (Lion lion : lions) {
+            if (lion.getWeight() < lion.getMaxWeight() + wietghOfFood){
+                lion.Feed(wietghOfFood);
+            }
+        else {
+            System.out.println("Lion is well-fed");
+            this.garbage = tempFood;}
+        }
     }
 
     @Override
@@ -52,20 +62,20 @@ public class LionCage implements AnimalCage{
         for (Lion lion : lions) {
             System.out.println(lion);                   
         }
-        System.out.println(lions.size());
         return String.format("В клетке %d львa(-ов)", lions.size());        
     }
 
     @Override
     public Lion takeOfAnimal() {
-        if(lions == null) return null;
-
+        if(lions.isEmpty()) {
+            System.out.println("Cage is empty");
+            return null;
+        } 
         else{
             Random random = new Random();
             int rand = random.nextInt(lions.size());
             return (Lion) lions.remove(rand);
         }
-
     }
 
     public void sortLions() {
@@ -82,6 +92,5 @@ public class LionCage implements AnimalCage{
             System.out.println(el);
         }
     }
-
 
 }
