@@ -1,8 +1,8 @@
-package S1_CW;
+package S1_CW.product;
 
 public class Product {
-    String name;
-    int price;
+    protected String name;
+    protected int price;
     
     public Product(String name, int price){
         this.name = name;

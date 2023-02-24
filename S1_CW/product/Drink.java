@@ -1,4 +1,4 @@
-package S1_CW;
+package S1_CW.product;
 
 public class Drink extends Product{
     protected int volume;

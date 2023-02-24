@@ -1,4 +1,4 @@
-package S1_CW;
+package S1_CW.product;
 
 public class HotDrink extends Drink{
     protected int temperature;

@@ -1,15 +1,12 @@
-package S1_CW;
+package S1_CW.WendingMachine;
 
 import java.util.ArrayList;
 
-public class DrinkMachine extends WendingMachine{
+import S1_CW.product.*;
+
+public class DrinkMachine extends WendingMachine<Drink>{
 
     protected ArrayList<Drink> drinkList;
-    
-    public DrinkMachine(String secondMachine) {
-        super(secondMachine);
-        this.drinkList = new ArrayList<Drink>();
-    }
     
     public void addDrink(Drink dr){
         drinkList.add(dr);
