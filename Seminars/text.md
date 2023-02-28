@@ -1,6 +1,9 @@
 ## Статика
 Статическая переменная - относится к самому классу, а не к его объектам. Не нужно создавать экземпляр.
 
+Статичный метод класса не может использовать не статичные переменные и методы класса
+Статичная переменная будет храниться в памяти до окончания работы программы
+
 ## Абстрактные классы и интерфейсы
 Абстрактные классы - классы для которых нельзя создать экземпляры.
 
@@ -58,7 +61,7 @@ public Car next(){
 
 Предполжим есть класс гараж, в нем лист из машин
 public class Garage implements Iterable<Car>
-Iterator<Lion> lionsIterator = lionsList.iteratщr();
+Iterator<Lion> lionsIterator = lionsList.iterator();
 while (lionsIterator.hasNext()){
     lion lion = lionIterator.next();
     sout(...);
@@ -81,3 +84,20 @@ public Iterator<Car> iterator(){
  ClassArrays<? extends Number> byteArray = new ClassArrays<Byte>(); - ограничения по наследнику
  ClassArrays<? super Number> byteArray = new ClassArrays<Number>(); - ограничения по предку
  ClassArrays<?> byteArray = new ClassArrays<Byte>(); - без ограничения
+
+ Функция оперирует переменными входными значениями и окружением.
+ А метод ими и переменными объекта.
+
+Переопределенный - метод, чья сигнатура унаследована, но логика в теле метода изменена
+
+## Singleton
+Класс с одним объектом
+- Приватные конструкторы, чтобы не появились другие объекты.
+- Статическая переменная, которая содержит единственный экземпляр
+- Фабричный метод, который при необходимости вызывает конструктор 
+if(staticInstance == null) {
+    staticInstance = new Instance();
+}
+return staticInstance;
+
+Single

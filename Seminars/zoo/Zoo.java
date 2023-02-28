@@ -1,9 +1,7 @@
 package zoo;
 
-import animals.Lion;
-import animals.Snake;
-import animals.Wolf;
-import cage.AnimalCage;
+import animals.*;
+import cage.*;
 
 public class Zoo{
     private AnimalCage<Wolf> wolfCage;
@@ -15,6 +13,35 @@ public class Zoo{
         this.lionCage = lionCage;
         this.snakeTerrarium = snakeTerrarium;
     }
+
+
+    public Lion takeOfLion(){
+        return this.lionCage.takeOfAnimal();
+    }
+
+    public int addLion(Lion animal){
+        return this.lionCage.addAnimal(animal);
+    }
+
+
+    public Wolf takeOfWolf(){
+        return this.wolfCage.takeOfAnimal();
+    }
+
+    public int addWolf(Wolf wolf){
+        System.out.println(wolf);
+        return this.wolfCage.addAnimal(wolf);
+    }
+
+
+    public Snake takeOfSnake(){
+        return this.snakeTerrarium.takeOfAnimal();
+    }
+
+    public int addSnake(Snake animal){
+        return this.snakeTerrarium.addAnimal(animal);
+    }
+
 
     public AnimalCage<Wolf> getWolfCage(){
         return wolfCage;
@@ -38,6 +65,10 @@ public class Zoo{
 
     public void setSnakeTerrarium(AnimalCage<Snake> snakeTerrarium){
         this.snakeTerrarium = snakeTerrarium;
+    }
+
+    public void printWolfCage(){
+        System.out.println(wolfCage);
     }
         
 }

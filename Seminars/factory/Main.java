@@ -6,6 +6,8 @@ import animalUtils.AnimalUtils;
 import animals.*;
 import cage.*;
 import factory.*;
+import terminal.TerminalReader;
+import zoo.Zoo;
 
 public class Main {
 
@@ -39,24 +41,29 @@ public class Main {
         
         // simba.Feed(10);
 
-        Wolf whiteFang = new Wolf(10, 50, 15, "Белый клык", "White");
+        //Wolf whiteFang = new Wolf(10, 50, 15, "Белый клык", "White");
 
-        ArrayList<Wolf> wolfs = WolfsFactory.createLions(4);
+        ArrayList<Wolf> wolfs = WolfsFactory.createWolfs(4);
         WolfCage wolfsInCage = new WolfCage();
 
-        wolfsInCage.addAnimal(whiteFang);
+        //wolfsInCage.addAnimal(whiteFang);
 
         for (Wolf wolf : wolfs) {
             wolfsInCage.addAnimal(wolf);
-            //wolf.Feed(5);
         }
 
-        System.out.println();
+        //System.out.println();
         System.out.println(wolfsInCage);
-        //wolfsInCage.takeOfAnimal();
-        
+
+        //TerminalReader terminal = new TerminalReader();
+        //TerminalReader.getTerminalReader();
+        Zoo zoo = new Zoo(wolfsInCage, null, null);
+        TerminalReader.getTerminalReader().endless(zoo);
+        //terminal.endless(zoo);
         System.out.println();
-        System.out.println(wolfsInCage);
+        zoo.printWolfCage();
+        zoo.addWolf(new Wolf(0, 0, 0, null, null));
+
 
 
         // System.out.println();

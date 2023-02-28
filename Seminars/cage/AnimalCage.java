@@ -15,7 +15,7 @@ public interface AnimalCage<T extends Animal> {
 
     void cleanCage(int garbage);
 
-    Animal takeOfAnimal();
+    T takeOfAnimal();
 
     default void sortByAge(ArrayList<T> animalList){
         Collections.sort(animalList, new AnimalAgeComparator());
