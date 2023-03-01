@@ -33,7 +33,6 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
     @Override
     public int addAnimal(Wolf animal) {
         if (animal.getType().equals("Wolf")){
-            System.out.println(animal.getType());
             wolfs.add(animal);  
         }
         return wolfs.size();

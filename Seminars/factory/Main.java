@@ -12,8 +12,6 @@ import zoo.Zoo;
 public class Main {
 
     public static void main(String[] args) {
-
-        //L2();
         
         // Lion simba = new Lion(10, 140, 15, "Simba", 200);
         // //System.out.println(simba);
@@ -41,30 +39,29 @@ public class Main {
         
         // simba.Feed(10);
 
-        //Wolf whiteFang = new Wolf(10, 50, 15, "Белый клык", "White");
-
         ArrayList<Wolf> wolfs = WolfsFactory.createWolfs(4);
         WolfCage wolfsInCage = new WolfCage();
-
-        //wolfsInCage.addAnimal(whiteFang);
 
         for (Wolf wolf : wolfs) {
             wolfsInCage.addAnimal(wolf);
         }
 
-        //System.out.println();
-        System.out.println(wolfsInCage);
+        ArrayList<Lion> lions = LionsFactory.createLions(2);
+        LionCage lionsInCage = new LionCage();
 
-        //TerminalReader terminal = new TerminalReader();
-        //TerminalReader.getTerminalReader();
-        Zoo zoo = new Zoo(wolfsInCage, null, null);
+        for (Lion lion : lions) {
+            lionsInCage.addAnimal(lion);
+        }
+
+        ArrayList<Snake> snakes = SnakesFactory.createSnakes(3);
+        SnakeCage snakesInCage = new SnakeCage();
+        
+        for (Snake snake : snakes) {
+            snakesInCage.addAnimal(snake);
+        }
+
+        Zoo zoo = new Zoo(wolfsInCage, lionsInCage, snakesInCage);
         TerminalReader.getTerminalReader().endless(zoo);
-        //terminal.endless(zoo);
-        System.out.println();
-        zoo.printWolfCage();
-        zoo.addWolf(new Wolf(0, 0, 0, null, null));
-
-
 
         // System.out.println();
         // WolfCage.sortWolfsWeightAge();
@@ -85,14 +82,11 @@ public class Main {
         // System.out.println("Сортировка по возрасту");
         // System.out.println(wolfsInCage);
 
-        WolfCage.sortWolfsWeightAge();
-        System.out.println();
-        System.out.println("Сортировка по возрасту и весу");
-        System.out.println(wolfsInCage);
+        // WolfCage.sortWolfsWeightAge();
+        // System.out.println();
+        // System.out.println("Сортировка по возрасту и весу");
+        // System.out.println(wolfsInCage);
         
-
     }
 
-    
-    
 }

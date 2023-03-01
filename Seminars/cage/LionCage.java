@@ -62,7 +62,7 @@ public class LionCage implements AnimalCage<Lion>{
         for (Lion lion : lions) {
             System.out.println(lion);                   
         }
-        return String.format("В клетке %d львa(-ов)", lions.size());        
+        return String.format("\nВ клетке %d львa(-ов)", lions.size());        
     }
 
     @Override

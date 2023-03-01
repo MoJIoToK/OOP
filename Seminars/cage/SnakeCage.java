@@ -31,7 +31,7 @@ public class SnakeCage implements AnimalCage<Snake> {
 
     @Override
     public int addAnimal(Snake animal) {
-        if (animal.getType().equals("Wolf")){
+        if (animal.getType().equals("Snake")){
             snakes.add(animal);  
         }
         return snakes.size();
@@ -63,7 +63,7 @@ public class SnakeCage implements AnimalCage<Snake> {
         for (Snake snake : snakes) {
             System.out.println(snake);                   
         }
-        return String.format("В террариуме %d змея(-ей)", snakes.size());        
+        return String.format("\nВ террариуме %d змея(-ей)", snakes.size());        
     }
 
     @Override

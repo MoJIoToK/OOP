@@ -70,5 +70,13 @@ public class Zoo{
     public void printWolfCage(){
         System.out.println(wolfCage);
     }
+
+    public void printLionCage(){
+        System.out.println(lionCage);
+    }
+
+    public void printSnakeCage(){
+        System.out.println(snakeTerrarium);
+    }
         
 }
