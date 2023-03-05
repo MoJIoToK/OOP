@@ -97,4 +97,16 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
         return new WolfIterator(wolfs);
     }
 
+    @Override
+    public int countAnimals() {
+        return wolfs.size();
+    }
+
+    public void printCage(){
+        for (Wolf el: wolfs
+             ) {
+            System.out.println(el);
+        }
+    }
+
 }

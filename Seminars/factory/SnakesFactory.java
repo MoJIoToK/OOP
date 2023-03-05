@@ -10,8 +10,7 @@ public class SnakesFactory {
     static public ArrayList<Snake> createSnakes (int snakeCount) {
         ArrayList<Snake> snakesCollection = new ArrayList<>(snakeCount);
         for (int i = 0; i < snakeCount; i++) {
-
-            Snake snake = new Snake(i, i, snakeCount, "name" + i, i);
+            Snake snake = new Snake("name", new Random().nextInt(50), new Random().nextInt(10), 4, i);
             snakesCollection.add(snake);
         }
         

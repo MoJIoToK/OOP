@@ -13,7 +13,7 @@ public class LionsFactory {
         for (int i = 0; i < lionCount; i++) {
             //System.out.println("Введите имя льва: ");
             //String name = iScanner.nextLine();
-            Lion lion = new Lion(1 + i, 90 + i, 4, "name" + i, new Random().nextInt(50)); //1 + i, 90 + i * 2, 10, 10 + i * 2)
+            Lion lion = new Lion("name", new Random().nextInt(50), new Random().nextInt(100), 4, i);
             lionsCollection.add(lion);
         }
         

@@ -5,8 +5,8 @@ public class Wolf extends Animal implements Comparable<Wolf> {
     protected static final int MAXWEIGHT = 100;
     protected static final String TYPE = "Wolf";
 
-    public Wolf(int ageOfBirth, int weight, int count, String name, String color) {
-        super(ageOfBirth, weight, count, name);
+    public Wolf(String name, int ageOfBirth, int weight, int count, String color) {
+        super(name, ageOfBirth, weight, count);
         this.color = color;
     }
 

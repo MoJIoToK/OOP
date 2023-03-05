@@ -78,5 +78,26 @@ public class Zoo{
     public void printSnakeCage(){
         System.out.println(snakeTerrarium);
     }
+
+    @Override
+    public String toString() {
+        int wolfCount = 0;
+        int snakeCount = 0;
+        int lionCount = 0;
+        if(wolfCage != null){
+            wolfCount = wolfCage.countAnimals();
+        }
+        if(lionCage != null){
+            lionCount = lionCage.countAnimals();
+        }
+        if(snakeTerrarium != null){
+            snakeCount = snakeTerrarium.countAnimals();
+        }
+        return "Zoo{"+
+                "wolves=" + wolfCount + 
+                ", lions=" + lionCount +
+                ", snakes=" + snakeCount +
+                "}";
+    }
         
 }

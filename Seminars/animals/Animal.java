@@ -6,7 +6,7 @@ public abstract class Animal{
     protected int countOfLimbs;
     protected String name;
 
-    public Animal(int ageOfBirth, int weight, int count, String name) {
+    public Animal(String name, int ageOfBirth, int weight, int count) {
         this.ageOfBirth = ageOfBirth;
         this.weight = weight;
         this.countOfLimbs = count;
