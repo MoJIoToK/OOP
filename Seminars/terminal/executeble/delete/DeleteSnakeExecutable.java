@@ -1,6 +1,8 @@
-package terminal.executeble;
+package terminal.executeble.delete;
 
-import terminal.Command;
+import animals.*;
+import terminal.command.Command;
+import terminal.executeble.CommandExecutable;
 import zoo.Zoo;
 
 public class DeleteSnakeExecutable implements CommandExecutable{

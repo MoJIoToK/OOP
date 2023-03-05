@@ -1,9 +1,9 @@
 package terminal;
 
 import java.util.Scanner;
-import terminal.*;
+import terminal.command.Command;
 import terminal.executeble.CommandExecutable;
-import terminal.executeble.CommandExecutableFactoryImpl;
+import terminal.factory.CommandExecutableFactoryImpl;
 import terminal.parser.CommandParser;
 import zoo.Zoo;
 

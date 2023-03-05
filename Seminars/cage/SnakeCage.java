@@ -63,7 +63,7 @@ public class SnakeCage implements AnimalCage<Snake> {
         for (Snake snake : snakes) {
             System.out.println(snake);                   
         }
-        return String.format("\nВ террариуме %d змея(-ей)", snakes.size());        
+        return String.format("В террариуме %d змея(-и)\n", snakes.size());        
     }
 
     @Override

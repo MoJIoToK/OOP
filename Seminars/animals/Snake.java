@@ -23,13 +23,9 @@ public class Snake extends Animal {
         return TYPE;
     }
 
-    // @Override
-    // public void Feed(int foodWeight) {
-    //     while(weight < MAXWEIGHT){
-    //         weight += foodWeight;
-    //     }
-    //     System.out.println("Max weight");
-    //     //super.Feed(foodWeight);
-    // }
+    @Override
+    public String toString() {
+        return String.format("%s, Тип животного - %s, Возраст - %d, Вес - %d, Длина тела - %d", name, TYPE, ageOfBirth, weight, lenghtBody);
+    }
 
 }

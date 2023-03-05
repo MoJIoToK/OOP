@@ -1,7 +1,7 @@
 package terminal.executeble;
 
 import animals.Animal;
-import terminal.Command;
+import terminal.command.Command;
 import zoo.Zoo;
 
 public interface CommandExecutable {

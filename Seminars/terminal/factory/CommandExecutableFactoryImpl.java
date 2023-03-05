@@ -1,6 +1,9 @@
-package terminal.executeble;
+package terminal.factory;
 
 import terminal.*;
+import terminal.command.Command;
+import terminal.command.CommandEnum;
+import terminal.executeble.CommandExecutable;
 import zoo.Zoo;
 
 public class CommandExecutableFactoryImpl implements CommandExecutableFactory {

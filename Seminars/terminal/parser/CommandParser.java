@@ -2,7 +2,7 @@ package terminal.parser;
 
 import java.util.ArrayList;
 
-import terminal.Command;
+import terminal.command.Command;
 
 public interface CommandParser {
 

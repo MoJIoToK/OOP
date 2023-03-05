@@ -1,6 +1,7 @@
-package terminal.executeble;
+package terminal.factory;
 
-import terminal.Command;
+import terminal.command.Command;
+import terminal.executeble.CommandExecutable;
 import zoo.Zoo;
 
 public interface CommandExecutableFactory {

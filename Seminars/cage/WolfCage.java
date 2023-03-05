@@ -64,7 +64,7 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
         for (Wolf wolf : wolfs) {
             System.out.println(wolf);                   
         }
-        return String.format("\nВ клетке %d волка(-ов)", wolfs.size());        
+        return String.format("В клетке %d волка(-ов)\n", wolfs.size());        
     }
 
     @Override
@@ -103,8 +103,7 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
     }
 
     public void printCage(){
-        for (Wolf el: wolfs
-             ) {
+        for (Wolf el: wolfs) {
             System.out.println(el);
         }
     }
