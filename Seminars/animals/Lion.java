@@ -33,7 +33,8 @@ public class Lion extends Animal implements Comparable<Lion> {
 
     @Override
     public String toString() {
-        return String.format("%s, Тип животного - %s, Возраст - %d, Вес - %d, Объем гривы - %d", name, TYPE, ageOfBirth, weight, volumeHair);
+        return String.format("%s, Тип животного - %s, Возраст - %d, Вес - %d, Объем гривы - %d", name, 
+                                TYPE, ageOfBirth, weight, volumeHair);
     }
 
     @Override

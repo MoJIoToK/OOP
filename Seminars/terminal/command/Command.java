@@ -1,7 +1,7 @@
 package terminal.command;
 
 import java.util.ArrayList;
-import terminal.*;
+
 public class Command {
 
     private String animal;
@@ -27,9 +27,9 @@ public class Command {
     }     
     
     public CommandEnum getCommandEnum(){
-        for (CommandEnum x: CommandEnum.values()){
-            if(x.checkType(this.action, this.animal)){
-                return (CommandEnum) x;
+        for (CommandEnum el: CommandEnum.values()){
+            if(el.checkType(this.action, this.animal)){
+                return (CommandEnum) el;
             }
         }
         return null;

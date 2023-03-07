@@ -1,13 +1,9 @@
 package factory;
 
 import java.util.ArrayList;
-
-import animalUtils.AnimalUtils;
 import animals.*;
 import cage.*;
-import factory.*;
 import terminal.TerminalReader;
-import terminal.parser.CommandParser;
 import terminal.parser.ZooCammandParser;
 import zoo.Zoo;
 
@@ -44,8 +40,6 @@ public class Main {
         terminal.setZoo(zoo);
         terminal.endless();
         System.out.println();
-
-        
     }
 
 }

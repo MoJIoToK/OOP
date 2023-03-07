@@ -1,6 +1,5 @@
 package terminal.factory;
 
-import terminal.*;
 import terminal.command.Command;
 import terminal.command.CommandEnum;
 import terminal.executeble.CommandExecutable;
@@ -16,7 +15,7 @@ public class CommandExecutableFactoryImpl implements CommandExecutableFactory {
     public CommandExecutable create(Command input) {
         CommandEnum codeEnum = input.getCommandEnum();
         CommandExecutable exec = codeEnum.getMethod();
-        return exec.getZoo(zoo, input);
+        return exec.zooCommand(zoo, input);
     }
 
     

@@ -25,7 +25,8 @@ public class Snake extends Animal {
 
     @Override
     public String toString() {
-        return String.format("%s, Тип животного - %s, Возраст - %d, Вес - %d, Длина тела - %d", name, TYPE, ageOfBirth, weight, lenghtBody);
+        return String.format("%s, Тип животного - %s, Возраст - %d, Вес - %d, Длина тела - %d", name, TYPE, 
+                            ageOfBirth, weight, lenghtBody);
     }
 
 }

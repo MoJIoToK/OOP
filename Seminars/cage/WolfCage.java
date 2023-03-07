@@ -12,7 +12,6 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
     private int foodWeight;
     private int garbage;
     private static ArrayList<Wolf> wolfs;
-    private int cursor;
 
     public WolfCage(){
         this.wolfs = new ArrayList<>();

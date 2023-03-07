@@ -3,7 +3,6 @@ package cage;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-
 import animals.*;
 
 public class LionCage implements AnimalCage<Lion>{

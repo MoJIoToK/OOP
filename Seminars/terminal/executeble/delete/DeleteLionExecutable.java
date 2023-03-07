@@ -1,6 +1,5 @@
 package terminal.executeble.delete;
 
-import animals.*;
 import terminal.command.Command;
 import terminal.executeble.CommandExecutable;
 import zoo.Zoo;
@@ -9,16 +8,16 @@ public class DeleteLionExecutable implements CommandExecutable{
 
     private Zoo zoo;
 
-    public DeleteLionExecutable(Zoo zoo){
-        this.zoo = zoo;
-    }
-
     public DeleteLionExecutable(){
 
     }
 
-    public DeleteLionExecutable getZoo(Zoo zoo, Command command){
+    public DeleteLionExecutable zooCommand(Zoo zoo, Command command){
         return new DeleteLionExecutable(zoo);
+    }
+
+    public DeleteLionExecutable(Zoo zoo){
+        this.zoo = zoo;
     }
 
     @Override

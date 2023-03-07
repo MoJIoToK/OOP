@@ -12,6 +12,5 @@ public class AnimalAgeComparator implements Comparator<Animal> {
         else if(animal1.getAge() < animal2.getAge()) return -1;
         return 0;
     }
-    
-    
+     
 }

@@ -38,17 +38,14 @@ public class TerminalReader {
         System.out.println("\nПриветствую, Пользователь!");   
         
         while (true){
-
             Menu.printMenu();
-
             System.out.println(zoo.toString() + "\n");
-
             String input = iScanner.nextLine();
+            
             if (input.equals("stop")) break;
-                Command newCommand = this.commandParser.parseCommand(input);
-                this.setCommandExecutable(newCommand);
-                this.commandExecutable.execute();
-
+            Command newCommand = this.commandParser.parseCommand(input);
+            this.setCommandExecutable(newCommand);
+            this.commandExecutable.execute();
         }
         iScanner.close();
     }

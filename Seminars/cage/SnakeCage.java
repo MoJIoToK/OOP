@@ -1,10 +1,7 @@
 package cage;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.Random;
-
 import animals.*;
 
 public class SnakeCage implements AnimalCage<Snake> {

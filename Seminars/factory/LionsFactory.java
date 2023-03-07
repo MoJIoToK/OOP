@@ -11,9 +11,8 @@ public class LionsFactory {
     static public ArrayList<Lion> createLions (int lionCount) {
         ArrayList<Lion> lionsCollection = new ArrayList<>(lionCount);
         for (int i = 0; i < lionCount; i++) {
-            //System.out.println("Введите имя льва: ");
-            //String name = iScanner.nextLine();
-            Lion lion = new Lion("name" + i, new Random().nextInt(50), new Random().nextInt(100), 4, new Random().nextInt(5) * i);
+            Lion lion = new Lion("name" + i, new Random().nextInt(50), new Random().nextInt(100), 
+                                4, new Random().nextInt(5) * i);
             lionsCollection.add(lion);
         }
         
